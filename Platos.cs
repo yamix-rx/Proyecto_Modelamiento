@@ -99,7 +99,7 @@ namespace Proyecto_Modelamiento
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Validar si hay un producto seleccionado
+            
             if (idProductoSeleccionado == 0)
             {
                 MessageBox.Show("Debe seleccionar una fila para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
