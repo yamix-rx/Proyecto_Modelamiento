@@ -230,7 +230,7 @@ namespace Proyecto_Modelamiento
 
         private void btnQuitarPedido_Click(object sender, EventArgs e)
         {
-            // 1. Verificar si hay alguna fila seleccionada
+            
             if (dgvPedidoCliente.SelectedRows.Count > 0)
             {
                 int indiceFila = dgvPedidoCliente.SelectedRows[0].Index;
@@ -244,7 +244,7 @@ namespace Proyecto_Modelamiento
 
                 if (resultado == DialogResult.Yes)
                 {
-                    // 4. Eliminar el ítem de la lista (nuestra fuente de datos)
+                    
                     listaPedido.RemoveAt(indiceFila);
 
                     // 5. Refrescar el DataGridView
