@@ -53,6 +53,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
             this.lblTituloInsumos = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBoxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
@@ -96,7 +97,7 @@
             // cboProveedor
             // 
             this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(190, 279);
+            this.cboProveedor.Location = new System.Drawing.Point(190, 283);
             this.cboProveedor.Name = "cboProveedor";
             this.cboProveedor.Size = new System.Drawing.Size(383, 33);
             this.cboProveedor.TabIndex = 20;
@@ -263,6 +264,7 @@
             // 
             // groupBoxDatos
             // 
+            this.groupBoxDatos.Controls.Add(this.label8);
             this.groupBoxDatos.Controls.Add(this.cboProveedor);
             this.groupBoxDatos.Controls.Add(this.cboCategoria);
             this.groupBoxDatos.Controls.Add(this.label7);
@@ -320,6 +322,15 @@
             this.lblTituloInsumos.TabIndex = 19;
             this.lblTituloInsumos.Text = "Almacen";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(57, 291);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 25);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Proveedor:";
+            // 
             // Almacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -371,5 +382,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dgvInsumos;
         private System.Windows.Forms.Label lblTituloInsumos;
+        private System.Windows.Forms.Label label8;
     }
 }
