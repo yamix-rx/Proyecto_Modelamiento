@@ -59,9 +59,9 @@ namespace CapaAccesoDatos
         }
 
 
-        // ----------------------------------------------------
-        // --- 2. Método para Registrar Producto ---
-        // ----------------------------------------------------
+        
+        //  Método para Registrar Producto 
+        
         public int Registrar(entProducto obj, out string Mensaje)
         {
             int idGenerado = 0;
