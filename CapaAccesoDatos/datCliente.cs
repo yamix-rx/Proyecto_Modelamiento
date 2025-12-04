@@ -11,15 +11,15 @@ namespace CapaAccesoDatos
 {
     public class datCliente
     {
-        // Método para listar todos los clientes
+        
         public List<entCliente> ListarCliente()
         {
             List<entCliente> lista = new List<entCliente>();
 
-            // 🚨 CORRECCIÓN: Usamos tu Singleton de conexión
+           
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                // Comando SQL para listar clientes
+                
                 SqlCommand cmd = new SqlCommand("SELECT IdCliente, Nombre, Apellido, DNI FROM Cliente", cn);
                 cmd.CommandType = CommandType.Text;
 
@@ -36,7 +36,7 @@ namespace CapaAccesoDatos
                             Nombre = dr["Nombre"] != DBNull.Value ? dr["Nombre"].ToString() : string.Empty,
                             Apellido = dr["Apellido"] != DBNull.Value ? dr["Apellido"].ToString() : string.Empty,
                             DNI = dr["DNI"] != DBNull.Value ? dr["DNI"].ToString() : string.Empty,
-                            // Si la columna 'FechaRegistro' no existe en la tabla, se inicializa aquí.
+                        
                             FechaRegistro = DateTime.Now
                         };
                         lista.Add(c);
