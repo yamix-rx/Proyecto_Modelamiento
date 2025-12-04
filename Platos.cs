@@ -83,7 +83,7 @@ namespace Proyecto_Modelamiento
             cboTipo.Items.Add("Bebida");
             cboTipo.SelectedIndex = 0; // Seleccionar "Plato" por defecto
 
-            // 2. Cargar el DataGridView
+            
             CargarProductos();
         }
 
