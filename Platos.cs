@@ -63,7 +63,7 @@ namespace Proyecto_Modelamiento
 
             foreach (entProducto item in listaProductos)
             {
-                // 1. Agrega una nueva fila
+                
                 int fila = dgvData.Rows.Add();
 
                 // 2. Asigna los valores a las celdas por el nombre de la columna
