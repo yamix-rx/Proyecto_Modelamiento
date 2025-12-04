@@ -153,9 +153,9 @@ namespace CapaAccesoDatos
             return respuesta;
         }
 
-        // ----------------------------------------------------
-        // --- 4. Método para Eliminar Producto ---
-        // ----------------------------------------------------
+        
+        //  Método para Eliminar Producto 
+       
         public bool Eliminar(int idproducto, out string Mensaje)
         {
             bool respuesta = false;
