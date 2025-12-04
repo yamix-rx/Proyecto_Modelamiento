@@ -339,7 +339,7 @@ namespace Proyecto_Modelamiento
             // 2. Obtener el ID de la fila seleccionada
             int idVentaSeleccionada = Convert.ToInt32(dgvPedidosRealizados.CurrentRow.Cells["IdVenta"].Value);
 
-            // 3. Confirmación de anulación
+            
             DialogResult resultado = MessageBox.Show($"¿Está seguro de anular la Venta ID {idVentaSeleccionada}? Esta acción eliminará la venta de la Base de Datos.", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
@@ -421,6 +421,11 @@ namespace Proyecto_Modelamiento
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
