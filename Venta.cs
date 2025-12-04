@@ -400,7 +400,7 @@ namespace Proyecto_Modelamiento
             }
         }
 
-        // Función auxiliar para limpiar los campos de datos del cliente
+        
         private void LimpiarDatosCliente()
         {
             txtNombreCliente.Clear();
@@ -413,6 +413,11 @@ namespace Proyecto_Modelamiento
             Form1 menuP = new Form1();
             this.Hide();
             menuP.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
