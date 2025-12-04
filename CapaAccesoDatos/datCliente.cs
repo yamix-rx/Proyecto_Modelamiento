@@ -51,10 +51,10 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        // Método para insertar un nuevo cliente
+       
         public bool InsertarCliente(entCliente cliente)
         {
-            // 🚨 CORRECCIÓN: Usamos tu Singleton de conexión
+            
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
                 string query = "INSERT INTO Cliente (Nombre, Apellido, DNI) VALUES (@Nombre, @Apellido, @DNI)";
