@@ -15,7 +15,6 @@ namespace CapaLogica
         #region sigleton
         // Variable estática para la instancia
         private static readonly logInsumo _instancia = new logInsumo();
-        // Propiedad estática para acceder a la instancia
         public static logInsumo Instancia
         {
             get
@@ -24,10 +23,6 @@ namespace CapaLogica
             }
         }
         #endregion singleton
-
-        // Referencia a la Capa de Acceso a Datos (DAL)
-        // 🚨 Es crucial que tu datInsumo tenga el Singleton Instancia.
-        // Asumiremos que logPedido existe y tiene el método CambiarEstado
 
         #region metodos
 
