@@ -247,11 +247,10 @@ namespace Proyecto_Modelamiento
                     
                     listaPedido.RemoveAt(indiceFila);
 
-                    // 5. Refrescar el DataGridView
+                    
                     dgvPedidoCliente.DataSource = null;
                     dgvPedidoCliente.DataSource = listaPedido;
 
-                    // 6. Recalcular el total
                     CalcularTotal();
                 }
             }
@@ -261,7 +260,7 @@ namespace Proyecto_Modelamiento
             }
         }
 
-        // 3. Función para cargar el DGV de la derecha (Pedidos Realizados)
+        
         private void CargarPedidosRealizados()
         {
             try
