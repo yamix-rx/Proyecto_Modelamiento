@@ -29,7 +29,7 @@ namespace CapaLogica
                 throw new Exception("Debe seleccionar un cliente válido (IdCliente faltante).");
             }
 
-            // Llamada al método que ahora guarda en SQL
+           
             return Datos.RegistrarVenta(venta);
         }
 
