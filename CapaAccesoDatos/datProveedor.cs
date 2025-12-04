@@ -10,10 +10,8 @@ using CapaEntidad;
 namespace CapaAccesoDatos
 {
     public class datProveedor
-    {
-        // =================================================================================
-        // 1. LISTAR PROVEEDORES
-        // =================================================================================
+    {  
+        // LISTAR PROVEEDORES  
         public List<entProveedor> ListarProveedor()
         {
             List<entProveedor> lista = new List<entProveedor>();
