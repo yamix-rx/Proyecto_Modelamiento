@@ -92,7 +92,7 @@ namespace CapaAccesoDatos
 
                 // CAMBIO CRÍTICO APLICADO 
                 cmd.Parameters.AddWithValue("@IdCategoria", ins.IdCategoria);
-                cmd.Parameters.AddWithValue("@IdProveedor", ins.IdProveedor); // ¡PARÁMETRO FALTANTE AÑADIDO!
+                cmd.Parameters.AddWithValue("@IdProveedor", ins.IdProveedor); // PARÁMETRO FALTANTE AÑADIDO
 
                 cn.Open();
                 int filas = cmd.ExecuteNonQuery();
@@ -111,9 +111,9 @@ namespace CapaAccesoDatos
             return insertado;
         }
 
-        // ==============================
+       
         // EDITAR INSUMO
-        // ==============================
+      
         public bool EditarInsumo(entInsumo ins)
         {
             try
@@ -133,7 +133,7 @@ namespace CapaAccesoDatos
                         cmd.Parameters.AddWithValue("@fecRegistro", ins.fecRegistro);
                         cmd.Parameters.AddWithValue("@IdCategoria", ins.IdCategoria);
 
-                        // 🚨 CORRECCIÓN CRÍTICA: Añadir el parámetro @IdProveedor
+                        // CORRECCIÓN CRÍTICA: Añadir el parámetro @IdProveedor
                         cmd.Parameters.AddWithValue("@IdProveedor", ins.IdProveedor);
 
                         cn.Open();
@@ -149,9 +149,9 @@ namespace CapaAccesoDatos
             }
         }
 
-        // ==============================
+       
         // DESCONTAR STOCK (COCINA)
-        // ==============================
+       
         public bool DescontarStock(int idInsumo, decimal cantidadDescontar)
         {
             try
@@ -177,9 +177,9 @@ namespace CapaAccesoDatos
             }
         }
 
-        // ==============================
+        
         // DESHABILITAR INSUMO
-        // ==============================
+        
         public bool DeshabilitarInsumo(int idInsumo)
         {
             try
