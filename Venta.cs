@@ -265,14 +265,13 @@ namespace Proyecto_Modelamiento
         {
             try
             {
-                // 1. Llama a la capa de datos para obtener TODAS las ventas (registradas, listas, etc.)
-                // Asumimos que ListarVentasRegistradas devuelve un DataTable.
+                
                 var listaVentasCompleta = new logVenta().ListarVentasRegistradas();
 
-                // 2. FILTRADO CLAVE: Usamos DataTable.Select para seleccionar solo aquellas ventas cuyo Estado es "Registrado".
+                
                 DataRow[] ventasFiltradasRows = listaVentasCompleta.Select("Estado = 'Registrado'");
 
-                // 3. Crear un nuevo DataTable con las filas filtradas
+               
                 DataTable ventasFiltradas = listaVentasCompleta.Clone(); // Copia la estructura
                 foreach (DataRow row in ventasFiltradasRows)
                 {
