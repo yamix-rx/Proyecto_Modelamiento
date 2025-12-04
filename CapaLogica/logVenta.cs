@@ -42,7 +42,7 @@ namespace CapaLogica
 
         //  NUEVO MÉTODO AGREGADO: Anular Venta
         /// <summary>
-        /// Llama a la capa de acceso a datos para eliminar un bloque de venta del archivo TXT.
+
         /// </summary>
         /// <param name="idVenta">El ID de venta (simulado) a anular.</param>
         public void AnularVenta(int idVenta)
