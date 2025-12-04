@@ -127,7 +127,7 @@ namespace Proyecto_Modelamiento
             if (resultado)
             {
                 MessageBox.Show("Producto editado con éxito.", "Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarProductos(); // Recargar el DataGridView
+                CargarProductos(); 
                 LimpiarCampos();
             }
             else
