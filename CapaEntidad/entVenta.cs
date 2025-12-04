@@ -9,15 +9,14 @@ namespace CapaEntidad
     public class entVenta
     {
         public int IdVenta { get; set; }
-        public int IdCliente { get; set; } // Necesario para FK
-        public int IdUsuario { get; set; } // 🚨 NUEVO: Requerido por la tabla Venta
+        public int IdCliente { get; set; } 
+        public int IdUsuario { get; set; } 
         public DateTime FechaVenta { get; set; }
-        public string TipoComprobante { get; set; } // 🚨 NUEVO: Requerido por la tabla Venta
+        public string TipoComprobante { get; set; } 
         public string TipoVenta { get; set; }
         public decimal TotalPagar { get; set; }
-        public string Estado { get; set; } // 🚨 NUEVO: Requerido por la tabla Venta (e.g., "Registrado")
+        public string Estado { get; set; } 
 
-        // El detalle de la venta (lista de productos)
         public List<entItemPedido> DetalleVenta { get; set; }
     }
 }
