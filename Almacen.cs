@@ -248,7 +248,7 @@ namespace Proyecto_Modelamiento
 
         private void Almacen_Load(object sender, EventArgs e)
         {
-            // Si lo quitaste del constructor, actívalo aquí
+            
             listarInsumo();
             groupBoxDatos.Enabled = false;
 
