@@ -49,7 +49,6 @@ namespace CapaLogica
             return Datos.EliminarCliente(cliente);
         }
 
-        // 🚨 NUEVO MÉTODO: Lógica de búsqueda
         public entCliente BuscarCliente(string dni)
         {
             if (string.IsNullOrWhiteSpace(dni))
