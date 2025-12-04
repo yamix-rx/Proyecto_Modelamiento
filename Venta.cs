@@ -350,7 +350,7 @@ namespace Proyecto_Modelamiento
                     new logVenta().AnularVenta(idVentaSeleccionada);
                     MessageBox.Show($"Venta ID {idVentaSeleccionada} anulada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // 4. Recargar el DataGridView para reflejar el cambio
+                    
                     CargarPedidosRealizados();
                 }
                 catch (Exception ex)
