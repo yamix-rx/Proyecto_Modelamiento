@@ -314,7 +314,7 @@
             // 
             this.lblTituloInsumos.AutoSize = true;
             this.lblTituloInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloInsumos.Location = new System.Drawing.Point(497, 9);
+            this.lblTituloInsumos.Location = new System.Drawing.Point(427, 9);
             this.lblTituloInsumos.Name = "lblTituloInsumos";
             this.lblTituloInsumos.Size = new System.Drawing.Size(164, 40);
             this.lblTituloInsumos.TabIndex = 19;
