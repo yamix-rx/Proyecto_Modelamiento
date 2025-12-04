@@ -84,9 +84,9 @@ namespace CapaAccesoDatos
             }
         }
 
-        // =================================================================================
-        // 3. EDITAR PROVEEDOR
-        // =================================================================================
+    
+        // EDITAR PROVEEDOR
+        
         public bool EditarProveedor(entProveedor proveedor)
         {
             using (SqlConnection cn = Conexion.Instancia.Conectar())
