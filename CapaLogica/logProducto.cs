@@ -34,17 +34,15 @@ namespace CapaLogica
             }
         }
 
-        // 2. Método para Registrar Producto(con validaciones)
+        // Método para Registrar Producto
         public int Registrar(entProducto obj, out string Mensaje)
         {
             Mensaje = string.Empty;
 
-            // --- Validaciones de Negocio ---
             if (string.IsNullOrWhiteSpace(obj.Nombre))
             {
                 Mensaje = "El nombre del plato/bebida no puede ser vacío.";
             }
-            // ... (el resto de las validaciones se mantienen) ...
             else if (obj.Costo <= 0)
             {
                 Mensaje = "El costo debe ser un valor positivo.";
@@ -60,17 +58,14 @@ namespace CapaLogica
             }
             else
             {
-                // Si pasa las validaciones, llama a la capa de datos
                 return Datos.Registrar(obj, out Mensaje);
             }
         }
 
-        // 3. Método para Editar Producto (con validaciones)
+        // Metodo para Editar Producto
         public bool Editar(entProducto obj, out string Mensaje)
         {
             Mensaje = string.Empty;
-
-            // --- Validaciones de Negocio ---
             if (obj.IdProducto == 0)
             {
                 Mensaje = "Debe seleccionar un producto para editar.";
@@ -90,20 +85,17 @@ namespace CapaLogica
 
             if (Mensaje != string.Empty)
             {
-                return false; // No se edita si hay errores de validación
+                return false; 
             }
             else
             {
-                // Si pasa las validaciones, llama a la capa de datos
                 return Datos.Editar(obj, out Mensaje);
             }
         }
 
-        // 4. Método para Eliminar Producto
+        // Metodo para Eliminar Producto
         public bool Eliminar(int idproducto, out string Mensaje)
         {
-            // Podrías añadir validaciones aquí, aunque gran parte de la lógica de restricción
-            // (asociación a ventas) ya está en el Procedimiento Almacenado.
             return Datos.Eliminar(idproducto, out Mensaje);
         }
     }
