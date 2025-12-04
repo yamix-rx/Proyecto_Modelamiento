@@ -19,7 +19,7 @@ namespace CapaLogica
 
         public bool InsertarCliente(entCliente cliente)
         {
-            // Validación de DNI (Ejemplo de regla de negocio: DNI no debe estar vacío)
+            // Validación DNI 
             if (string.IsNullOrWhiteSpace(cliente.DNI))
             {
                 throw new Exception("El DNI es un campo obligatorio para registrar.");
@@ -56,7 +56,6 @@ namespace CapaLogica
                 throw new Exception("Debe ingresar un DNI para buscar al cliente.");
             }
 
-            // Llama al método de acceso a datos
             return Datos.BuscarClientePorDNI(dni);
         }
     }
