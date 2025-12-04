@@ -150,7 +150,7 @@ namespace CapaAccesoDatos
        
         public bool EliminarCliente(entCliente cliente)
         {
-            // 🚨 CORRECCIÓN: Usamos tu Singleton de conexión
+         
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
                 string query = "DELETE FROM Cliente WHERE IdCliente = @IdCliente";
