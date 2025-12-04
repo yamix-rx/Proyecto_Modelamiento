@@ -69,7 +69,7 @@ namespace CapaAccesoDatos
         }
 
         // INSERTAR INSUMO
-        // ==============================
+        
         public bool InsertarInsumo(entInsumo ins)
         {
             SqlCommand cmd = null;
@@ -79,7 +79,7 @@ namespace CapaAccesoDatos
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
 
-                // 1. Incluir @IdProveedor en el comando, ya que el SP lo requiere
+                // Incluir @IdProveedor en el comando, ya que el SP lo requiere
                 cmd = new SqlCommand("spInsertarInsumo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
