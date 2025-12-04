@@ -10,7 +10,6 @@ namespace CapaLogica
 {
     public class logProveedor
     {
-        // Patron de Diseño Singleton (opcional, pero buena práctica)
         private static readonly logProveedor _instancia = new logProveedor();
         public static logProveedor Instancia { get { return logProveedor._instancia; } }
 
@@ -18,14 +17,12 @@ namespace CapaLogica
         private readonly datProveedor datProveedor = new datProveedor();
 
 
-        // =================================================================================
-        // 1. LISTAR PROVEEDORES
-        // =================================================================================
+        // LISTAR PROVEEDORES
         public List<entProveedor> ListarProveedor()
         {
             try
             {
-                // Solo llama a la capa de datos. Las reglas de negocio irían aquí.
+                // Solo llama a la capa de datos
                 return datProveedor.ListarProveedor();
             }
             catch (Exception ex)
@@ -35,9 +32,8 @@ namespace CapaLogica
             }
         }
 
-        // =================================================================================
+
         // 2. INSERTAR PROVEEDOR
-        // =================================================================================
         public bool InsertarProveedor(entProveedor proveedor)
         {
             try

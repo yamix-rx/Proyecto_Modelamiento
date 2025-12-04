@@ -13,7 +13,7 @@ namespace CapaLogica
         // IMPLEMENTACION DEL SINGLETON
         private static readonly logProducto _instancia = new logProducto();
 
-        // Propiedad estática para acceder a la instancia única
+        // Propiedad estática para acceder a la instancia unica
         public static logProducto Instancia
         {
             get { return _instancia; }
