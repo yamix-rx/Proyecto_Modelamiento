@@ -165,7 +165,7 @@ namespace Proyecto_Modelamiento
             // 2. Agregar a la lista que alimenta el DataGridView
             listaPedido.Add(nuevoItem);
 
-            // 3. Refrescar el DataGridView
+            
             dgvPedidoCliente.DataSource = null;
             dgvPedidoCliente.DataSource = listaPedido;
 
