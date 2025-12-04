@@ -91,7 +91,7 @@ namespace CapaAccesoDatos
         {
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                // Sentencia SQL para la actualización (UPDATE)
+               
                 string query = @"
             UPDATE Proveedor SET 
                 Nombre = @Nombre, 
@@ -99,13 +99,13 @@ namespace CapaAccesoDatos
                 Telefono = @Telefono, 
                 DNI = @DNI, 
                 Direccion = @Direccion
-            WHERE IdProveedor = @IdProveedor"; // <--- CLAVE: El filtro WHERE
+            WHERE IdProveedor = @IdProveedor"; 
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.CommandType = CommandType.Text;
 
                 // Parámetros de la consulta
-                cmd.Parameters.AddWithValue("@IdProveedor", proveedor.IdProveedor); // CLAVE: ID
+                cmd.Parameters.AddWithValue("@IdProveedor", proveedor.IdProveedor); 
                 cmd.Parameters.AddWithValue("@Nombre", proveedor.Nombre);
                 cmd.Parameters.AddWithValue("@Apellido", proveedor.Apellido ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Telefono", proveedor.Telefono ?? (object)DBNull.Value);
@@ -116,7 +116,7 @@ namespace CapaAccesoDatos
                 {
                     cn.Open();
                     int i = cmd.ExecuteNonQuery();
-                    return i > 0; // Retorna true si se actualizó al menos 1 fila
+                    return i > 0; 
                 }
                 catch (Exception ex)
                 {
