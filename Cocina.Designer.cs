@@ -90,7 +90,7 @@
             this.btnPreparar.Name = "btnPreparar";
             this.btnPreparar.Size = new System.Drawing.Size(140, 76);
             this.btnPreparar.TabIndex = 21;
-            this.btnPreparar.Text = "Pedido Preparado";
+            this.btnPreparar.Text = "Preparar...";
             this.btnPreparar.UseVisualStyleBackColor = true;
             this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
             // 
@@ -131,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1048, 996);
             this.Controls.Add(this.btnActualizarPedidos);
             this.Controls.Add(this.label3);
