@@ -90,9 +90,9 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@estInsumo", ins.estInsumo);
                 cmd.Parameters.AddWithValue("@fecRegistro", ins.fecRegistro);
 
-                // --- 🚨 CAMBIO CRÍTICO APLICADO ---
+                // CAMBIO CRÍTICO APLICADO 
                 cmd.Parameters.AddWithValue("@IdCategoria", ins.IdCategoria);
-                cmd.Parameters.AddWithValue("@IdProveedor", ins.IdProveedor); // 👈 ¡PARÁMETRO FALTANTE AÑADIDO!
+                cmd.Parameters.AddWithValue("@IdProveedor", ins.IdProveedor); // ¡PARÁMETRO FALTANTE AÑADIDO!
 
                 cn.Open();
                 int filas = cmd.ExecuteNonQuery();
