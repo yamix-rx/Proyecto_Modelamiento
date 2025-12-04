@@ -119,7 +119,7 @@ namespace Proyecto_Modelamiento
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // 1. Validar que se haya seleccionado un producto
+            
             if (idCategoriaSeleccionada == 0)
             {
                 MessageBox.Show("Debe seleccionar una categoría de la lista para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);

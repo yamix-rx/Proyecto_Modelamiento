@@ -250,6 +250,7 @@
             this.label13.Size = new System.Drawing.Size(60, 20);
             this.label13.TabIndex = 29;
             this.label13.Text = "Fecha:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // cmbTipoVenta
             // 
