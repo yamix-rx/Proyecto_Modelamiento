@@ -8,9 +8,9 @@ namespace CapaEntidad
 {
     public class entDetalleReceta
     {
-        public int IdInsumo { get; set; } // Clave para el descuento
+        public int IdInsumo { get; set; } 
         public string InsumoNombre { get; set; }
-        public decimal CantidadNecesaria { get; set; } // Cantidad por UN plato
+        public decimal CantidadNecesaria { get; set; } 
         public string UnidadMedida { get; set; }
     }
 }
