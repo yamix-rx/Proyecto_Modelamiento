@@ -20,9 +20,7 @@ namespace CapaAccesoDatos
         {
             SqlConnection cn = new SqlConnection();
 
-            // 🚀 CORRECCIÓN APLICADA: 
-            // 1. Se eliminó el punto y coma (;) innecesario después de DBCocina.
-            // 2. Se unificó toda la cadena de conexión en una sola expresión válida.
+         
             cn.ConnectionString = "Data Source=DESKTOP-PK88VMC\\YENCI_RX;Initial Catalog=dprueba4;Integrated Security=true";
 
             return cn;
