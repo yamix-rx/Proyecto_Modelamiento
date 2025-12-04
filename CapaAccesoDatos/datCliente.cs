@@ -82,15 +82,15 @@ namespace CapaAccesoDatos
         {
             entCliente cliente = null;
 
-            // Asumimos que tienes el método Conectar() de tu Singleton de Conexion
+           
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                // Nota: Asegúrate que tu tabla 'Cliente' tenga la columna 'DNI' y que no sea NULL
+               
                 string query = "SELECT IdCliente, Nombre, Apellido, DNI FROM Cliente WHERE DNI = @DNI";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.CommandType = CommandType.Text;
 
-                // El DNI es el parámetro de búsqueda
+         
                 cmd.Parameters.AddWithValue("@DNI", dni);
 
                 try
@@ -100,7 +100,7 @@ namespace CapaAccesoDatos
 
                     if (dr.Read())
                     {
-                        // Si encuentra el registro, crea la entidad Cliente
+                    
                         cliente = new entCliente
                         {
                             IdCliente = Convert.ToInt32(dr["IdCliente"]),
