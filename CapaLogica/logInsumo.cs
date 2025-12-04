@@ -26,26 +26,25 @@ namespace CapaLogica
 
         #region metodos
 
-        // Listado
+        // Listar
         public List<entInsumo> ListarInsumo()
         {
-            // Asumimos que datInsumo.Instancia.ListarInsumo() existe
             return datInsumo.Instancia.ListarInsumo();
         }
 
-        // Inserta
+        // Insertar
         public void InsertarInsumo(entInsumo ins)
         {
             datInsumo.Instancia.InsertarInsumo(ins);
         }
 
-        // Edita
+        // Editar
         public void EditarInsumo(entInsumo ins)
         {
             datInsumo.Instancia.EditarInsumo(ins);
         }
 
-        // Deshabilita
+        // Deshabilitar
         public void DeshabilitarInsumo(int idInsumo)
         {
             datInsumo.Instancia.DeshabilitarInsumo(idInsumo);
@@ -55,10 +54,6 @@ namespace CapaLogica
         // 🚀 NUEVOS MÉTODOS PARA EL FLUJO DE COCINA
         // ====================================================================
 
-        /// <summary>
-        /// Descuenta una cantidad específica del stock de un insumo usando un SP.
-        /// </summary>
-        /// <returns>True si el descuento fue exitoso (stock suficiente), False si falló.</returns>
         public bool DescontarStock(int idInsumo, decimal cantidadDescontar)
         {
             // Se asume que datInsumo.Instancia.DescontarStock llama al SP_DescontarStockInsumo
