@@ -50,9 +50,9 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        // =================================================================================
-        // 2. INSERTAR PROVEEDOR (REGISTRAR)
-        // =================================================================================
+      
+        // INSERTAR PROVEEDOR (REGISTRAR)
+    
         public bool InsertarProveedor(entProveedor proveedor)
         {
             using (SqlConnection cn = Conexion.Instancia.Conectar())
