@@ -14,7 +14,7 @@ namespace Proyecto_Modelamiento
 {
     public partial class Cocina : Form
     {
-        // 🚨 Nueva variable global para almacenar todos los productos
+        
         private List<entProducto> ListaTotalProductos;
         public Cocina()
         {
