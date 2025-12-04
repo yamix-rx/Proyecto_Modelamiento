@@ -106,9 +106,8 @@ namespace CapaAccesoDatos
             return idGenerado;
         }
 
-        // ----------------------------------------------------
-        // --- 3. Método para Editar Producto ---
-        // ----------------------------------------------------
+        //  Método para Editar Producto 
+        
         public bool Editar(entProducto obj, out string Mensaje)
         {
             bool respuesta = false;
