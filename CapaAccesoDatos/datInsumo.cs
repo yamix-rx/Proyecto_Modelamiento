@@ -21,9 +21,9 @@ namespace CapaAccesoDatos
 
         #region Métodos
 
-        // ==============================
+       
         // LISTAR INSUMOS
-        // ==============================
+      
         public List<entInsumo> ListarInsumo()
         {
             List<entInsumo> lista = new List<entInsumo>();
@@ -68,7 +68,6 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        // ==============================
         // INSERTAR INSUMO
         // ==============================
         public bool InsertarInsumo(entInsumo ins)
