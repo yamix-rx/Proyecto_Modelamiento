@@ -11,9 +11,8 @@ namespace CapaAccesoDatos
 {
     public class datProveedor
     {
-        // =================================================================================
+       
         // 1. LISTAR PROVEEDORES
-        // =================================================================================
         public List<entProveedor> ListarProveedor()
         {
             List<entProveedor> lista = new List<entProveedor>();
