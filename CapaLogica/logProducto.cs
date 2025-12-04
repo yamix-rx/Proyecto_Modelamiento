@@ -13,17 +13,15 @@ namespace CapaLogica
         // IMPLEMENTACION DEL SINGLETON
         private static readonly logProducto _instancia = new logProducto();
 
-
-
         // Propiedad estática para acceder a la instancia única
         public static logProducto Instancia
         {
             get { return _instancia; }
         }
 
-        private datProducto Datos = new datProducto(); // Instancia de la DAL
+        private datProducto Datos = new datProducto(); 
 
-        // 1. Método para Listar Productos
+        // Método para Listar Productos
         public List<entProducto> ListarProductos()
         {
             try
