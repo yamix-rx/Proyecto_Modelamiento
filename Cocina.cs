@@ -115,7 +115,7 @@ namespace Proyecto_Modelamiento
             }
             finally
             {
-                CargarPedidos(); // Siempre recargar para ver los cambios de estado/stock
+                CargarPedidos(); 
             }
         }
 
