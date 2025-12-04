@@ -17,7 +17,7 @@ namespace CapaLogica
         // 🚨 MÉTODO ACTUALIZADO: Ahora recibe solo la entidad Venta
         public bool RegistrarVenta(entVenta venta)
         {
-            // Validación de Negocio: Verificar que haya ítems
+            
             if (venta.DetalleVenta == null || venta.DetalleVenta.Count == 0)
             {
                 throw new Exception("El pedido debe contener al menos un plato o bebida.");
@@ -52,7 +52,7 @@ namespace CapaLogica
                 throw new Exception("El ID de venta para anular debe ser un número positivo válido.");
             }
 
-           
+            // Llama al método de datVenta que elimina el bloque de texto
             Datos.AnularVenta(idVenta);
         }
     }
