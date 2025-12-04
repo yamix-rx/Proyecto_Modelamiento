@@ -178,7 +178,7 @@ namespace CapaAccesoDatos
         }
 
         
-        // DESHABILITAR INSUMO
+        // DESHABILITAR INSUMO--Corregido
         
         public bool DeshabilitarInsumo(int idInsumo)
         {
