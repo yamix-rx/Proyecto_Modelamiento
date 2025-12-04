@@ -116,13 +116,13 @@ namespace CapaAccesoDatos
                     throw new Exception("Error al buscar cliente por DNI: " + ex.Message);
                 }
             }
-            return cliente; // Devuelve la entidad o null si no se encuentra
+            return cliente; 
         }
 
-        // Método para actualizar un cliente existente
+        
         public bool ActualizarCliente(entCliente cliente)
         {
-            // 🚨 CORRECCIÓN: Usamos tu Singleton de conexión
+          
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
                 string query = "UPDATE Cliente SET Nombre = @Nombre, Apellido = @Apellido, DNI = @DNI WHERE IdCliente = @IdCliente";
@@ -147,7 +147,7 @@ namespace CapaAccesoDatos
             }
         }
 
-        // Método para eliminar un cliente
+       
         public bool EliminarCliente(entCliente cliente)
         {
             // 🚨 CORRECCIÓN: Usamos tu Singleton de conexión
