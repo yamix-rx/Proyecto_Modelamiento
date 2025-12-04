@@ -58,7 +58,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        // 🚨 Agregamos el método para marcar como listo (Notificar Mozo) que usa el SP spMarcarPedidoListo
+        
         public bool MarcarPedidoListo(int idVenta)
         {
             using (SqlConnection cn = Conexion.Instancia.Conectar())
