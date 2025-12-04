@@ -97,7 +97,7 @@ namespace Proyecto_Modelamiento
 
 
                 groupBoxDatos.Enabled = true;
-                // Deshabilitamos el botón de Registrar, habilitamos Modificar y Deshabilitar
+                
                 btnRegistrar.Enabled = false;
                 btnModificar.Enabled = true;
                 btnDeshabilitar.Enabled = true; // Asegúrate de tener este botón
@@ -182,7 +182,7 @@ namespace Proyecto_Modelamiento
 
                     // --- CLAVES FORÁNEAS ---
                     IdCategoria = idCategoriaSeleccionada,
-                    IdProveedor = idProveedorSeleccionado // 🚨 CRÍTICO: ASIGNAR EL VALOR
+                    IdProveedor = idProveedorSeleccionado 
                 };
 
                 // 3. Llamada a la Capa Lógica (logInsumo.cs)
