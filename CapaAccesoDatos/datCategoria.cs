@@ -20,7 +20,7 @@ namespace CsapaAccesoDatos
             get { return _instancia; }
         }
         #endregion
-        // --- Listar ---
+        
         public List<entCategoria> ListarCategorias()
         {
             List<entCategoria> Lista = new List<entCategoria>();
@@ -55,7 +55,7 @@ namespace CsapaAccesoDatos
             return Lista;
         }
 
-        // --- Registrar ---
+        
         public int Registrar(entCategoria obj, out string Mensaje)
         {
             int idGenerado = 0;
@@ -89,7 +89,7 @@ namespace CsapaAccesoDatos
             return idGenerado;
         }
 
-        // --- Editar ---
+     
         public bool Editar(entCategoria obj, out string Mensaje)
         {
             bool respuesta = false;
@@ -124,7 +124,7 @@ namespace CsapaAccesoDatos
             return respuesta;
         }
 
-        // --- Eliminar ---
+       
         public bool Eliminar(int idcategoria, out string Mensaje)
         {
             bool respuesta = false;
