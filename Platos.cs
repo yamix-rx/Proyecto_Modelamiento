@@ -81,7 +81,7 @@ namespace Proyecto_Modelamiento
             // 1. Cargar el ComboBox de Tipo
             cboTipo.Items.Add("Plato");
             cboTipo.Items.Add("Bebida");
-            cboTipo.SelectedIndex = 0; // Seleccionar "Plato" por defecto
+            cboTipo.SelectedIndex = 0; 
 
             
             CargarProductos();
