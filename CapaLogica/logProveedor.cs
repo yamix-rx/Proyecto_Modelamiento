@@ -33,12 +33,11 @@ namespace CapaLogica
         }
 
 
-        // 2. INSERTAR PROVEEDOR
+        // INSERTAR PROVEEDOR
         public bool InsertarProveedor(entProveedor proveedor)
         {
             try
             {
-                // Regla de negocio: Podrías validar que el DNI no esté vacío aquí
                 if (string.IsNullOrWhiteSpace(proveedor.Nombre))
                 {
                     throw new Exception("El nombre del proveedor no puede estar vacío.");
