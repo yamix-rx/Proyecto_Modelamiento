@@ -17,6 +17,7 @@ namespace CapaLogica
             get { return _instancia; }
         }
         #endregion
+        //metodo para llamar al metodo listar pedido de la capa de acceso a datos
         public List<entPedido> ListarPedidosPendientes()
         {
             return datPedido.Instancia.ListarPedidosPendientes();
