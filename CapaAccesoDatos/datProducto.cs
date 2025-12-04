@@ -11,9 +11,9 @@ namespace CapaAccesoDatos
 {
     public class datProducto
     {
-        // ----------------------------------------------------
-        // --- 1. Método para Listar Productos (DataGrid/Combos) ---
-        // ----------------------------------------------------
+       
+        //  Método para Listar Productos (DataGrid/Combos) 
+        
         public List<entProducto> ListarProductos()
         {
             List<entProducto> Lista = new List<entProducto>();
