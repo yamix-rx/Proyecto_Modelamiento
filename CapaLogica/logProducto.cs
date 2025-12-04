@@ -10,11 +10,7 @@ namespace CapaLogica
 {
     public class logProducto
     {
-        // ====================================================================
-        // 🚨 CAMBIO 1: IMPLEMENTACIÓN DEL SINGLETON
-        // ====================================================================
-
-        // Variable estática y de solo lectura para la instancia única
+        // IMPLEMENTACION DEL SINGLETON
         private static readonly logProducto _instancia = new logProducto();
 
 
