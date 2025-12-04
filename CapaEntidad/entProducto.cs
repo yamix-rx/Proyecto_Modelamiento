@@ -11,7 +11,7 @@ namespace CapaEntidad
         public int IdProducto { get; set; }
         public string Nombre { get; set; }
         public decimal Costo { get; set; }
-        public string Tipo { get; set; } // "Plato" o "Bebida"
+        public string Tipo { get; set; } 
         public int Stock { get; set; }
     }
 }
