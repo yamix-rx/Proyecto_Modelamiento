@@ -100,7 +100,7 @@ namespace Proyecto_Modelamiento
 
         private void Proveedor_Load(object sender, EventArgs e)
         {
-            //CargarProveedores();
+            
             listarProveedor();
         }
 
