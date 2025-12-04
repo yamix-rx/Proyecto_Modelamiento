@@ -47,7 +47,6 @@ namespace CapaLogica
 
         public bool Eliminar(int idcategoria, out string Mensaje)
         {
-            // Puedes añadir lógica de negocio si es necesario antes de eliminar
             return Datos.Eliminar(idcategoria, out Mensaje);
         }
     }
