@@ -55,13 +55,13 @@ namespace CapaLogica
         {
             try
             {
-                // Regla de negocio: Asegurar que hay un ID para editar
+                // Asegurar que hay un ID para editar
                 if (proveedor.IdProveedor <= 0)
                 {
                     throw new Exception("El ID del proveedor a editar no es válido.");
                 }
 
-                // Regla de negocio: Validar que el nombre no esté vacío
+                // Validar que el nombre no esté vacío
                 if (string.IsNullOrWhiteSpace(proveedor.Nombre))
                 {
                     throw new Exception("El nombre del proveedor no puede estar vacío.");
