@@ -329,14 +329,14 @@ namespace Proyecto_Modelamiento
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // 1. Verificar si hay alguna fila seleccionada en el DataGridView de la derecha
+            // Verificar si hay alguna fila seleccionada en el DataGridView de la derecha
             if (dgvPedidosRealizados.CurrentRow == null)
             {
                 MessageBox.Show("Debe seleccionar una venta para anular.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Obtener el ID de la fila seleccionada
+            // Obtener el ID de la fila seleccionada
             int idVentaSeleccionada = Convert.ToInt32(dgvPedidosRealizados.CurrentRow.Cells["IdVenta"].Value);
 
             
@@ -346,7 +346,7 @@ namespace Proyecto_Modelamiento
             {
                 try
                 {
-                    // 🚨 Llamada a la Lógica que ahora usa SQL DELETE
+                    // Llamada a la Lógica que ahora usa SQL DELETE
                     new logVenta().AnularVenta(idVentaSeleccionada);
                     MessageBox.Show($"Venta ID {idVentaSeleccionada} anulada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -374,17 +374,17 @@ namespace Proyecto_Modelamiento
 
             try
             {
-                // 1. Ejecutar la búsqueda
+                // Ejecutar la búsqueda
                 logCliente log = new logCliente();
                 entCliente clienteEncontrado = log.BuscarCliente(dniBuscado);
 
                 if (clienteEncontrado != null)
                 {
-                    // 2. Mostrar datos encontrados
+                    // Mostrar datos encontrados
                     txtNombreCliente.Text = clienteEncontrado.Nombre;
                     txtApellidosCliente.Text = clienteEncontrado.Apellido;
 
-                    // 🚨 CRUCIAL: Guardar el ID para usarlo al registrar la venta
+                    // CRUCIAL: Guardar el ID para usarlo al registrar la venta
                     _IdClienteSeleccionado = clienteEncontrado.IdCliente;
 
                     MessageBox.Show("Cliente encontrado. Nombre: " + clienteEncontrado.Nombre, "Búsqueda Exitosa");
