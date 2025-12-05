@@ -350,7 +350,7 @@ namespace Proyecto_Modelamiento
                     new logVenta().AnularVenta(idVentaSeleccionada);
                     MessageBox.Show($"Venta ID {idVentaSeleccionada} anulada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    k
+                    
                     CargarPedidosRealizados();
                 }
                 catch (Exception ex)
