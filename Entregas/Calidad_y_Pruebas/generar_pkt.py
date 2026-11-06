@@ -46,12 +46,60 @@ for i in (1,2):
     srv["fa0"].connect(b[f"fa0/{port}"])
     b.config(f"interface FastEthernet0/{port}\n description SRV-{i}_SERVIDORES\n switchport mode access\n switchport access vlan 50\n spanning-tree portfast")
 
-n.note("FARMACIA SANET - N=28 EQUIPOS TERMINALES | 26 PCS + 2 SERVIDORES | 5 VLAN",(520,-35))
-n.note("R1: INTER-VLAN 802.1Q",(1190,100))
-n.note("SW1: 14 PCS / TRONCALES G0/1 A R1 Y G0/2 A SW2",(160,350))
-n.note("SW2: 12 PCS Y 2 SERVIDORES / TRONCAL G0/1 A SW1",(1250,350))
-n.note("VLAN 10: VENTAS 8 | VLAN 20: INVENTARIO 7 | VLAN 30: ADMIN 6 | VLAN 40: REPORTES 5 | VLAN 50: SERVIDORES 2",(280,1100))
-n.note("PRUEBAS: show vlan brief | show interfaces trunk | show ip interface brief | ping 192.168.50.11",(350,1175))
+
+# Colores suaves de fondo y contornos bien visibles por VLAN
+vlan_colors = {
+    10: ("#1976D2","#E7F2FF","VENTAS Y CAJA"),
+    20: ("#2E7D32","#EAF7EA","INVENTARIO Y COMPRAS"),
+    30: ("#7B1FA2","#F3E7FC","ADMINISTRACION / USUARIOS / CATALOGOS"),
+    40: ("#E65100","#FFF0DD","REPORTES Y CONSULTAS"),
+    50: ("#C62828","#FDE8E7","SERVIDORES DE APLICACION Y BD"),
+}
+
+def panel(vlan, box, etiqueta):
+    x1,y1,x2,y2=box
+    borde,relleno,area=vlan_colors[vlan]
+    n.rectangle(x1,y1,x2,y2,outline=borde,fill=relleno)
+    n.note(f"VLAN {vlan} - {area} | {etiqueta}",(x1+30,y1+18))
+
+# VLAN 20 se muestra en dos paneles verdes porque ocupa ambos switches.
+panel(10,(55,465,1030,870),"8 PC - SW1")
+panel(20,(55,930,1030,1310),"6 PC - SW1")
+panel(20,(1090,465,1540,685),"1 PC - SW2")
+panel(50,(1580,465,2075,685),"2 SERVIDORES - SW2")
+panel(30,(1090,745,2075,1045),"6 PC - SW2")
+panel(40,(1090,1115,2075,1415),"5 PC - SW2")
+
+# Solo cambian coordenadas para agrupar visualmente; no se altera ninguna conexión ni configuración.
+r.xy=(1080,100)
+a.xy=(540,290)
+b.xy=(1645,290)
+def pc_xy(i):
+    if i<=8:
+        j=i-1
+        return 165+(j%4)*235,590+(j//4)*185
+    if i<=14:
+        j=i-9
+        return 250+(j%3)*300,1040+(j//3)*160
+    if i==15: return 1300,575
+    if i<=21:
+        j=i-16
+        return 1260+(j%3)*300,835+(j//3)*135
+    j=i-22
+    return 1260+(j%3)*300,1205+(j//3)*135
+
+for i in range(1,27):
+    n.device(f"PC-{i:02d}").xy=pc_xy(i)
+n.device("SRV-1").xy=(1690,580)
+n.device("SRV-2").xy=(1915,580)
+
+n.note("FARMACIA SANET - N=28 TERMINALES | 26 PC + 2 SERVIDORES | 5 VLAN",(520,10))
+n.note("R1 - ENRUTAMIENTO INTER-VLAN 802.1Q",(1240,95))
+n.note("SW1: 14 PC | G0/1: TRONCAL A R1 | G0/2: TRONCAL A SW2",(155,355))
+n.note("SW2: 12 PC + 2 SERVIDORES | G0/1: TRONCAL A SW1",(1265,355))
+n.note("COLORES: VLAN 10 AZUL | VLAN 20 VERDE | VLAN 30 MORADO | VLAN 40 NARANJA | VLAN 50 ROJO",(300,1525))
+n.note("PRUEBAS: show vlan brief | show interfaces trunk | ping desde PC-01 a 192.168.50.11",(315,1590))
+
 n.save(dest)
 assert len(n.devices)==31 and len(n.links)==30
 print(dest,dest.stat().st_size,"bytes")
